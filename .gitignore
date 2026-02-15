@@ -1,0 +1,5 @@
+.env
+elk-stack/.env
+*.log
+__pycache__/
+*.pyc

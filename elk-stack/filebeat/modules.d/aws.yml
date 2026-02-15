@@ -1,0 +1,18 @@
+- module: aws
+  cloudtrail:
+    enabled: true
+    var.bucket_arn: arn:aws:s3:::aws-cloudtrail-logs-620740731898-92c0f532
+    var.bucket_list_prefix: AWSLogs/620740731898
+    var.number_of_workers: 2
+    var.api_timeout: 120s
+    var.access_key_id: ${AWS_ACCESS_KEY_ID}
+    var.secret_access_key: ${AWS_SECRET_ACCESS_KEY}
+    var.region: us-east-2
+  s3access:
+    enabled: false
+  vpcflow:
+    enabled: false
+  elb:
+    enabled: false
+  cloudwatch:
+    enabled: false
